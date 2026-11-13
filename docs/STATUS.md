@@ -34,7 +34,7 @@ The historical MOV exceeds ordinary GitHub's single-file 100 MB limit and is NOT
 - [x] Decoded first/middle/near-final frames in both formats and confirmed real varying alpha values 0–255; see [VERIFIED_MEDIA.md](VERIFIED_MEDIA.md).
 - [x] Replaced the new baseline's default MOV encoding with ProRes alpha, matching the historical MOV *codec family* (not original extraction model).
 - [x] Added local synthetic clip generator and reference alpha output, tested with FFmpeg.
-- [x] Added export verification tool, 6 local unit checks and a restore helper for an owner-supplied original Flower Friends archive.
+- [x] Added export verification tool, 6 local unit checks plus 1 FFmpeg-based synthetic integration test and a restore helper for an owner-supplied original Flower Friends archive.
 - [ ] New rembg model evaluated on the original Viggle clip end-to-end with quality report.
 - [ ] Rights confirmed and original binary media legally distributed to external contributors.
 

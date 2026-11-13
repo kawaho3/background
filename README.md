@@ -71,3 +71,5 @@ The old historical MOV uses ProRes alpha, so the new extractor now defaults to a
 ## Scope and ownership
 
 The project focuses on **extracting the foreground from existing video**, not downloading third-party media, web scraping, or full 3D show production. All source videos, proprietary media, model weights and big rendered outputs require rights review before public distribution. A project-wide original-code/asset license has **not yet been selected**; maintainers should decide it before unrestricted reuse.
+
+**Reproducibility update:** `tests/test_synthetic_integration.py` runs a tiny generated character through both alpha codecs and verifies sampled alpha, size and silence. The media analysis from historical outputs is also available as machine-readable [JSON](docs/evidence/historical_exports_verified.json). Seven local tests now pass (the integration test skips when FFmpeg/Pillow are missing).
