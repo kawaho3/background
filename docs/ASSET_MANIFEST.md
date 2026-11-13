@@ -15,3 +15,5 @@ These files were found or described in prior project conversations/Library. List
 | Flower Friends Python scripts, JSON timeline, SRT subtitles, text dialogue | small | Recovered text/code | **Yes** |
 
 The previous Flower Friends editable ZIP was not unpacked and fully transferred in this repository. Separate models, voice tracks, fonts and aligned art are needed to run the example renderer. Assets should be added only after rights approval and checksum verification. For large licensed binary outputs, consider Git LFS or a GitHub Release; document GitHub storage quotas first. Do **not** publish signed/private CDN URLs or credentials.
+
+For verified SHA-256 hashes, technical alpha evidence and the original's exact duration/frame count, see [VERIFIED_MEDIA.md](VERIFIED_MEDIA.md). For obtaining authorized original assets, see [ASSET_PROVISIONING.md](ASSET_PROVISIONING.md).

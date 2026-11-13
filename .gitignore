@@ -6,6 +6,7 @@ venv/
 input/
 output/
 assets-private/
+**/assets/
 **/models/
 **/work/
 **/deliverables/
@@ -22,3 +23,5 @@ frames/
 *.png
 *.jpg
 *.jpeg
+*.ttf
+*.otf

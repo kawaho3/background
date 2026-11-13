@@ -27,6 +27,27 @@ python -m unittest discover -s tests -v
 
 **Output:** WebM VP9 with alpha (not all players show alpha) or MOV QuickTime Animation with alpha; both have **no audio**. The baseline uses independently segmented frames and may show flicker, missed details and variable-frame-rate drift. It is a starting point, not a finished temporal matting system.
 
+
+## New contributor — full project handoff
+
+**Start with [PROJECT_HANDOFF.md](docs/PROJECT_HANDOFF.md).** It explains the exact request, constraints, known historical outputs, what was recovered, what is missing, and the next steps. No ChatGPT conversation is needed.
+
+1. [Developer setup](docs/DEVELOPER_SETUP.md) — clone/install and local demo
+2. [Verified original exports](docs/VERIFIED_MEDIA.md) — original input/output hashes, 485-frame/19.4-second evidence, sampled alpha, zero audio
+3. [Release checklist](docs/RELEASE_CHECKLIST.md) — objective done criteria
+4. [Asset provisioning](docs/ASSET_PROVISIONING.md) — which files are outside Git and how the owner can supply them
+5. [Decision log](docs/DECISION_LOG.md) — architectural and policy decisions
+
+A self-contained **synthetic** character/transparent-reference demo is generated locally, without the original source video or paid services:
+
+```sh
+python scripts/make_demo.py --output-dir output/synthetic-demo
+python scripts/verify_export.py output/synthetic-demo/synthetic_reference_alpha.mov --strict
+python -m unittest discover -s tests -v
+```
+
+The old historical MOV uses ProRes alpha, so the new extractor now defaults to a ProRes MOV when given a `.mov` output. This change was checked with local codec/alpha tests; the new rembg extraction model has not yet been validated end-to-end against the original video.
+
 ## Read this to contribute
 
 - [Project brief](docs/PROJECT_BRIEF.md) — the user request, constraints and acceptance criteria

@@ -16,3 +16,5 @@ python render_cinematic.py
 ~~~
 
 Use this folder as a reference for speech-timed eyes/lips, not a working sample of transparent video extraction.
+
+To locally recover missing original image/audio/font files from the maintainer-provided editable ZIP, run `python examples/flower-friends/restore_assets.py /path/to/Flower_Friends_Editable_Project.zip` from repository root. The tool checks the ZIP's exact known SHA-256 before unpacking only `assets/` and `work/`; it does not modify the committed Python source files. The complete archive and font binaries remain outside Git.

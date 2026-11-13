@@ -4,7 +4,8 @@
 - [x] Consolidate objective, status, original references and missing assets.
 - [x] Add baseline local foreground isolation script and metadata-free unit checks.
 - [ ] End-to-end test on a legal clip and capture alpha/video/audio metadata.
-- [ ] Include short rights-cleared synthetic test input, expected output and checksums.
+- [x] Add a local generator for a rights-cleared synthetic input and transparent reference (source code, no binary upload needed).
+- [ ] Add fully automatic integration-test comparison against the synthetic reference.
 - [ ] Validate Windows and Linux installation, FFmpeg and model download.
 - [ ] Add a machine-readable FFprobe report for alpha, frame count, duration and silence.
 

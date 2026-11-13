@@ -24,3 +24,13 @@ The main product must **isolate an animated character**, preserve that character
 ## Good first contributions
 
 A rights-cleared synthetic video integration test; FFprobe alpha/audio verification; Windows installation docs; handling variable frame rate; frame-by-frame corrections; temporal matting benchmarks and resumable frame processing.
+
+## Ready-to-run synthetic test (no previous chat or private source needed)
+
+```sh
+python scripts/make_demo.py
+python scripts/verify_export.py output/synthetic-demo/synthetic_reference_alpha.mov --strict
+python -m unittest discover -s tests -v
+```
+
+Read [the complete handoff](docs/PROJECT_HANDOFF.md) and [the evidence record](docs/VERIFIED_MEDIA.md) before claiming parity with prior outputs. ProRes 4444 is the default MOV export; the original source video, licensed footage and its exact extraction script are NOT in this public repo.

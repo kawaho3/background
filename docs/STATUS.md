@@ -26,3 +26,16 @@
 - [ ] License decision for project code, videos, art and third-party models.
 
 The historical MOV exceeds ordinary GitHub's single-file 100 MB limit and is NOT part of this public repo. Ask owner for licensed sample or an approved Git LFS/release mechanism.
+
+## Additional verified handoff (13 November 2026)
+
+- [x] Recovered the actual historical input and two outputs for local metadata inspection (not committed as public assets).
+- [x] FFprobe independently confirmed 485 frames and 19.4 seconds for input, WebM and MOV; outputs contain no audio streams.
+- [x] Decoded first/middle/near-final frames in both formats and confirmed real varying alpha values 0–255; see [VERIFIED_MEDIA.md](VERIFIED_MEDIA.md).
+- [x] Replaced the new baseline's default MOV encoding with ProRes alpha, matching the historical MOV *codec family* (not original extraction model).
+- [x] Added local synthetic clip generator and reference alpha output, tested with FFmpeg.
+- [x] Added export verification tool, 6 local unit checks and a restore helper for an owner-supplied original Flower Friends archive.
+- [ ] New rembg model evaluated on the original Viggle clip end-to-end with quality report.
+- [ ] Rights confirmed and original binary media legally distributed to external contributors.
+
+Start with [PROJECT_HANDOFF.md](PROJECT_HANDOFF.md) and [DEVELOPER_SETUP.md](DEVELOPER_SETUP.md).
